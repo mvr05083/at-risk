@@ -1,0 +1,51 @@
+<form class="form-horizontal radius" ng-submit="re.createRequest(re.requestData)">
+  <fieldset class="radius">
+
+  <!-- Form Name -->
+  <legend>Early Alert Entry</legend>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="medium-4 control-label" for="request-date">Request Date</label>
+    <div class="medium-4">
+    <input id="request-date" ng-model="re.requestData.request_date"name="request-date" type="date" placeholder="2 Days from Current Date" class="form-control input-md" required="">
+
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+  <div class="form-group">
+    <label class="medium-4 control-label" for="request-type">Request Type</label>
+    <div class="medium-4">
+      <select id="request-type" ng-model="re.requestData.request_type" name="request-type" class="form-control">
+        <option value="Error/Bug">Error/Bug</option>
+        <option value="Support">Support</option>
+        <option value="Inquiry">Inquiry</option>
+        <option value="TRF">TRF</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Textarea -->
+  <div class="form-group">
+    <label class="medium-4 control-label" for="textarea">Request Body</label>
+    <div class="medium-4">
+      <textarea class="form-control" ng-model="re.requestData.request_body" id="textarea" name="textarea">Place your request here!</textarea>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="form-group">
+    <label class="medium-4 control-label" for="singlebutton"></label>
+    <div class="medium-4">
+      <button id="singlebutton" name="singlebutton" class="btn btn-success">Send Request</button>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="medium-4 col-md-offset-4 alert-box success" ng-if="re.message">{{ re.message }}</div>
+  </div>
+
+  </fieldset>
+
+</form>

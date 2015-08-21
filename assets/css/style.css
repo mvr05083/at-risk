@@ -1,0 +1,61 @@
+html {
+  overflow-y: scroll;
+}
+
+body{
+  /*background: #F1F1F1;*/
+  background-image: url("../img/school.png");
+  background-repeat: repeat;
+}
+
+.full-width{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+
+.home-ticket{
+  max-width: 90%;
+  margin-right: auto;
+  margin-left : auto;
+  padding-top: 10px;
+  border-top: 6px #A0A0A0  solid;
+  border-bottom: 3px #CED0CE solid;
+  background: #fff;
+}
+
+.padding-45{
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+#content-views{ position: relative}
+
+.ng-enter, .ng-leave {
+	width: 100%;
+	position: absolute;
+}
+
+.spinner{
+	animation: spin 1s infinite;
+	-webkit-animation: spin 1s infinite;
+	-moz-animation: spin 1s infinite;
+}
+
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to 	 { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+	from { transform: rotate(0deg); }
+	to 	 { transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+	from { transform: rotate(0deg); }
+	to 	 { transform: rotate(360deg); }
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak{
+  display: none !important;
+}

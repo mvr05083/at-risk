@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="text-center" ng-if="!re.initial" >
+		<h3>Requests</h3>
+		<a class="button primary radius" href="/requests/create">New Request <i class="fa fa-plus"></i></a>
+	</div>
+
+	<div class="panel radius columns small-12 text-center padding-45" ng-if="re.processing && !re.error">
+		<i class="fa fa-spinner spinner"></i>
+		<h5>Loading Users...</h5>
+	</div>
+
+	<div class="panel radius warning columns small-12 text-center padding-45" ng-if="re.error">
+		<h5>{{ re.error }}</h5>
+	</div>
+
+	<div class="columns small-8 small-offset-2">
+		<table class="table table-bordered table-striped full-width" ng-if="!re.processing && !re.error">
+			<thead>
+				<tr>
+					<th>Student @ Number</th>
+					<th>Student Name</th>
+					<th>Date Submitted</th>
+					<th class="col-sm-2 col-md-2"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="r in re.requests['entries']">
+					<td>{{ r['2'] }}</td>
+					<td>{{ r['39'] }} {{ r['40']}}</td>
+					<td>{{ r['date_created'] | date: "MM/dd/yyyy" }}</td>
+					<td class="col-sm-2"><a class="btn btn-primary" href='/requests/view/{{ r["id"] }}' >View</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

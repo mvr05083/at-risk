@@ -1,0 +1,48 @@
+<main class="row padding-45">
+  <section class="columns small-12 radius panel text-center">
+    <h3>Welcome to the Early Alert System</h3>
+    <h6>You can start by viewing existing entries...</h6>
+    <p><i class="fa fa-exclamation-triangle fa-5x"></i></p>
+    <a href="/requests" class="button radius clearfix">Off to the Requests with ya!</a>
+  </section>
+</main>
+<section>
+  <section class="text-center">
+    <h4 class="subheader">Number of Alerts Successfully Avoided</h4>
+    <div class="progress small-12 success ">
+      <span class="meter" style="width: {{ home.percent }}%"></span>
+      {{ home.percent }}%
+    </div>
+  </section>
+  <section>
+    <ul class="small-block-grid-1 medium-block-grid-3 text-center padding-45">
+      <li>
+        <div  class="home-ticket">
+          <h5 class="subheader">For advisors.</h5>
+          <p>
+            <i class="fa fa-life-ring fa-3x"></i>
+          </p>
+          <a href="/submit" class="button radius success">Submit Entries</a>
+        </div>
+      </li>
+      <li>
+        <div class="home-ticket">
+          <h5 class="subheader">For administrators.</h5>
+          <p>
+            <i class="fa fa-user-secret fa-3x"></i>
+          </p>
+          <a href="/requests" class="button radius warning">Visit History</a>
+        </div>
+      </li>
+      <li>
+        <div class="home-ticket">
+          <h5 class="subheader">For students.</h5>
+          <p>
+            <i class="fa fa-graduation-cap fa-3x"></i>
+          </p>
+          <a href="/recommend" class="button radius info">View Recommendations</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+</section>
