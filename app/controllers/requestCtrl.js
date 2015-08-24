@@ -4,10 +4,10 @@ angular.module('requestCtrl', [])
 
     Request.all().success(function(data){
       console.log(data);
-      if(data['total_count'] > 0){
+      if(data['response']['total_count'] > 0){
         vm.requests = data["response"];
       } else {
-        vm.error = "There are currently no entries. Try adding some!";
+        vm.error =  data['response']['total_count'] + "There are currently no entries. Try adding some!";
       }
 
       vm.processing = false;

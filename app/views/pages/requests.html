@@ -1,11 +1,11 @@
 <div class="row">
 	<div class="text-center" ng-if="!re.initial" >
-		<h3>Requests</h3>
+		<h2 class="subheader">Requests</h2>
 		<a class="button primary radius" href="/requests/create">New Request <i class="fa fa-plus"></i></a>
 	</div>
 
 	<div class="panel radius columns small-12 text-center padding-45" ng-if="re.processing && !re.error">
-		<i class="fa fa-spinner spinner"></i>
+		<i class="fa fa-spinner spinner fa-3x"></i>
 		<h5>Loading Users...</h5>
 	</div>
 
@@ -14,7 +14,7 @@
 	</div>
 
 	<div class="columns small-8 small-offset-2">
-		<table class="table table-bordered table-striped full-width" ng-if="!re.processing && !re.error">
+		<table class="table table-bordered table-striped full-width" ng-show="!re.processing && !re.error">
 			<thead>
 				<tr>
 					<th>Student @ Number</th>
@@ -25,8 +25,11 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="r in re.requests['entries']">
-					<td>{{ r['2'] }}</td>
-					<td>{{ r['39'] }} {{ r['40']}}</td>
+					<td>
+						{{ r }}
+					</td>
+					<td>{{ r['12.1'] }} {{ r['12.2'] }}</td>
+					<td>{{ r['6'] }}</td>
 					<td>{{ r['date_created'] | date: "MM/dd/yyyy" }}</td>
 					<td class="col-sm-2"><a class="btn btn-primary" href='/requests/view/{{ r["id"] }}' >View</a></td>
 				</tr>

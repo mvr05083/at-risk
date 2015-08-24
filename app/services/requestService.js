@@ -15,9 +15,6 @@ angular.module('requestService', [])
 	requestFactory.all = function(){
     var expires = parseInt(new Date().getTime() / 1000) + 3600;
 
-    console.log(URL + route + "?api_key=809cbb8609&signature=" +
-            CalculateSig.getURL("GET", route, expires) + "&expires=" + expires);
-
 		return $http.get(URL + route + "?api_key=809cbb8609&signature=" +
             CalculateSig.getURL("GET", route, expires) + "&expires=" + expires);
 	};
